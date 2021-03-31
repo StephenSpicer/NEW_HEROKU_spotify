@@ -5,13 +5,13 @@ from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
 from functions import wrangle, the_key, create_fit_model, recommended_songs
 
-# def create_app():
-#     """
-#     Function to deploy heroku application.
-#     Contains assortment of functions which control the inputs and outputs
-#     of interactive web application.
-#     """
-# return app
+def create_app():
+    """
+    Function to deploy heroku application.
+    Contains assortment of functions which control the inputs and outputs
+    of interactive web application.
+    """
+
 app = Flask(__name__)
 
 data_path = 'https://raw.githubusercontent.com/StephenSpicer/Spotify_Music_Discovery_LS_DS_BW/main/data/data.csv'
@@ -64,5 +64,4 @@ def recommendations():
                            song_title=song_title,
                            suggestions=suggestions)
 
-if __name__ == '__main__':
-    app.run(debug=True)    # Can probably remove debug=True
+return app    # Can probably remove debug=True
