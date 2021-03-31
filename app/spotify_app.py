@@ -3,7 +3,7 @@ STUFF TOO IN A FEW DAYS OR SO
 """
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
-from functions import wrangle, the_key, create_fit_model, recommended_songs
+from .functions import wrangle, the_key, create_fit_model, recommended_songs
 
 def create_app():
     """
