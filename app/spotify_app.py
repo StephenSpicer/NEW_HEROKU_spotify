@@ -4,6 +4,7 @@ STUFF TOO IN A FEW DAYS OR SO
 from flask import Flask, render_template, request
 from .functions import wrangle, the_key, create_fit_model, recommended_songs
 
+
 def create_app():
     """
     Function to deploy heroku application.
@@ -21,7 +22,6 @@ def create_app():
     # instantiate model
     knn_spotify = create_fit_model(features_df)
 
-
     @app.route('/')
     def root():
         """
@@ -31,12 +31,10 @@ def create_app():
         """
         return render_template('home.html')
 
-
     @app.route('/about')
     def about():
         """About the app and creators"""
         return "This is what it's all about!"
-
 
     @app.route('/song_selection')
     def song_selection():
@@ -45,9 +43,8 @@ def create_app():
         Moves user to recommendations page.
         """
         # Call model predict on song
-        return render_template('song.html')
-
-
+        return render_template('song.html',
+                               data=key.tolist())
 
     @app.route('/recommendations', methods=['POST'])
     def recommendations():
