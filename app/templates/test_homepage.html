@@ -8,21 +8,35 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <body id="myPage">
 
-
-<!-- HEY GUYS THIS IS A BASIC OPTION WE ARE ADDING INTO OUR REPO NOW -->
-<!-- SO THIS COMBINED WITH THE IMAGES SHOULD BE SUFFICIENT FOR A SKELETON -->
+<!-- Sidebar on click -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-green">Close
+    <i class="fa fa-remove"></i>
+  </a>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button">Link 4</a>
+  <a href="#" class="w3-bar-item w3-button">Link 5</a>
+</nav>
 
 <!-- Navbar -->
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>HOME</a>
-  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">POTENTIALLY SONGS PAGE</a>
+  <a href="#" class="w3-bar-item w3-button w3-green"><i class="fa fa-play w3-margin-right"></i>TOP 10 song recommender</a>
+  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Team</a>
+  <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Work</a>
 
-    
+    <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Dropdown? <i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="#" class="w3-bar-item w3-button">Link</a>
+      <a href="#" class="w3-bar-item w3-button">Link</a>
+      <a href="#" class="w3-bar-item w3-button">Link</a>
     </div>
   </div>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-green" title="Search"><i class="fa fa-search"></i></a>
  </div>
 
   <!-- Navbar on small screens -->
@@ -35,88 +49,126 @@
   </div>
 </div>
 
+
+
 <!-- Image Header -->
 <div class="w3-display-container w3-animate-opacity">
-  <img src="/w3images/sailboat.jpg" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+  <img src="https://i.insider.com/5e4c5ed32dae5c59666e3c35?width=1000&format=jpeg&auto=webp" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
   <div class="w3-container w3-display-bottomleft w3-margin-bottom">  
-    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge w3-theme w3-hover-green" title="Go To W3.CSS">ADJUST ACCORDINGLY</button>
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge w3-theme w3-hover-green" title="Go To W3.CSS">GET RECOMMENDATIONS</button>
   </div>
 </div>
 
 
-<!-- THIS SECTION BELOW COULD BE OUR PREDICT BUTTON IF YOU LIKE -->
-<!-- IT's UP TO YOU REALLY -->
-<!-- Modal -->
-<div id="id01" class="w3-modal">
-  <div class="w3-modal-content w3-card-4 w3-animate-top">
-    <header class="w3-container w3-teal w3-display-container"> 
-      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
-      <h4>Oh snap! We just showed you a modal..</h4>
-      <h5>Because we can <i class="fa fa-smile-o"></i></h5>
-    </header>
-    <div class="w3-container">
-      <p>Cool huh? Ok, enough teasing around..</p>
-      <p>Go to our <a class="w3-text-teal" href="/w3css/default.asp">W3.CSS Tutorial</a> to learn more!</p>
-    </div>
-    <footer class="w3-container w3-teal">
-      <p>Modal footer</p>
-    </footer>
-  </div>
+
+
+<!-- Work Row -->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+
+<div class="w3-quarter">
+<h2>How We Pick Your Top Tracks:</h2>
+<p>This app represents a nearest-neighbords model from Sci-Kit Learn. The model was trained on data offered by spotify - data that represents deep categorization of songs and their characteristics. Using some of the brilliant metrics that spotify uses to suggest music to their users, we are able to return a short list of songs we think you will enjoy based on your song selection. </p>
 </div>
 
-<!-- THE SECTION BELOW IS OUR TEAM SECTION -->
+
+</div>
+
+<!-- Container -->
+<div class="w3-container" style="position:relative">
+  <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-green"
+  style="position:absolute;top:-28px;right:24px">+</a>
+</div>
+
+
+
+
 <!-- Team Container -->
 <div class="w3-container w3-padding-64 w3-center" id="team">
 <h2>OUR TEAM</h2>
-<p>Meet the team - our office rats:</p>
+<p>:April-Fools Build Week Crew:</p>
 
 <div class="w3-row"><br>
 
 <div class="w3-quarter">
   <img src="/w3images/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Johnny Walker</h3>
-  <p>Web Designer</p>
+  <h3>Hillary</h3>
+  <p>DS24</p>
 </div>
 
 <div class="w3-quarter">
   <img src="/w3images/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Rebecca Flex</h3>
-  <p>Support</p>
+  <h3>Filipe</h3>
+  <p>DS23</p>
 </div>
 
 <div class="w3-quarter">
   <img src="/w3images/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Jan Ringo</h3>
-  <p>Boss man</p>
+  <h3>Israel</h3>
+  <p>DS24</p>
 </div>
 
 <div class="w3-quarter">
   <img src="/w3images/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-  <h3>Kai Ringo</h3>
-  <p>Fixer</p>
+  <h3>Nick</h3>
+  <p>DS23</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="/w3images/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Stephen</h3>
+  <p>DS23</p>
 </div>
 
 </div>
 </div>
 
+<!-- Image of location/map -->
 
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+  position: relative;
+  font-family: Arial;
+}
 
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <img src="https://blogmedia.evbstatic.com/wp-content/uploads/wpmulti/sites/3/2018/03/03103805/big-concert-audience-listening-to-music-at-festival-picture-id485343244.jpg" alt="Nature" style="width:100%;">
+  <div class="text-block">
+    <h4>Music</h4>
+    <p>What a wonderful thing</p>
+  </div>
+</div>
 
+</body>
+</html> 
 
-
-
-<!-- YOU COULD CHANGE THIS TO A RELEVANT IMAGE - THE LINE BELOW REFERENCES THE IMAGE LOCATION -->
-<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%;">
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
-  <h4>OTHER LINKS MAYBE</h4>
-  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
-  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
-  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
-  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
-  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <h4>Find us on Github</h4>
+  <a class="w3-button w3-large w3-green" href="javascript:void(0)" title="https://github.com/fcollares"><i class="fa fa-github"></i></a>
+  <a class="w3-button w3-large w3-green" href="javascript:void(0)" title="https://github.com/hillarykhanr"><i class="fa fa-github"></i></a>
+  <a class="w3-button w3-large w3-green" href="javascript:void(0)" title="https://github.com/SophistryDude"><i class="fa fa-github"></i>
+  </a>
+  <a class="w3-button w3-large w3-green" href="javascript:void(0)" title="https://github.com/StephenSpicer"><i class="fa fa-github"></i>
+  </a>
+  <a class="w3-button w3-large w3-green w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-github"></i>
+  </a>
+  <p>Powered by <a href="https://www.lamdbaschool.com" target="_blank">Lambda School</a></p>
 
   <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
     <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>   
