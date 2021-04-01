@@ -33,7 +33,7 @@ def create_app():
         Gives information on what the app does.
         Button to 'Get Started' will take user to /song_selection.
         """
-        return render_template('home.html')
+        return render_template('test_homepage.html')
 
     @app.route('/about')
     def about():
