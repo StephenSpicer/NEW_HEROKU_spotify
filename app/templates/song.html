@@ -26,6 +26,7 @@
         var currentFocus;
         /*execute a function when someone writes in the text field:*/
         inp.addEventListener("input", function(e) {
+            console.log("input", e);
             var a, b, i, val = this.value;
             /*close any already open lists of autocompleted values*/
             closeAllLists();
@@ -48,9 +49,12 @@
                     limit--;
                     /*create a DIV element for each matching element:*/
                     b = document.createElement("DIV");
+                    console.log(arr[i].toUpperCase().indexOf(val.toUpperCase()));
                     /*make the matching letters bold:*/
-                    b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-                    b.innerHTML += arr[i].substr(val.length);
+                    var regEx = new RegExp(val, "ig");
+                    b.innerHTML = arr[i].replace(regEx, "<strong>" + arr[i].substr(arr[i].toUpperCase().indexOf(val.toUpperCase()), val.length) + "</strong>");
+                    {#b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";#}
+                    {#b.innerHTML += arr[i].substr(val.length);#}
                     /*insert a input field that will hold the current array item's value:*/
                     b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
                     /*execute a function when someone clicks on the item value (DIV element):*/
