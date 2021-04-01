@@ -19,6 +19,10 @@ def create_app():
     features_df = wrangle(data_path)
     # create key dataframe of id and song_artist
     key = the_key(data_path)
+    # convert key to list with title casing
+    key_list = key.tolist()
+    for i in range(len(key_list)):
+        key_list[i] = key_list[i].title()
     # instantiate model
     knn_spotify = create_fit_model(features_df)
 
@@ -44,7 +48,7 @@ def create_app():
         """
         # Call model predict on song
         return render_template('song.html',
-                               data=key.tolist())
+                               data=key_list)
 
     @app.route('/recommendations', methods=['POST'])
     def recommendations():
@@ -60,4 +64,4 @@ def create_app():
                                song_title=song_title,
                                suggestions=suggestions)
 
-    return app    # Can probably remove debug=True
+    return app
