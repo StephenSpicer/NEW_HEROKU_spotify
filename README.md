@@ -5,7 +5,7 @@ This is a Lambda school build week project - an app to recommend song suggestion
 [Check out the results here.](https://trackfinder2021.herokuapp.com/)
 
 ## Data Source
-The spotify data set was already pretty clean, thankfully! Specifically, we used the data.csv from [Kaggle](https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks?select=data.csv).
+The spotify data set was already pretty clean, thankfully! Specifically, we used the ['data.csv' file from Kaggle](https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks?select=data.csv).
 
 ## Running in the terminal
 Once you cd to the main directory, install the dependencies, and activate the virtual environment, run the following code:
