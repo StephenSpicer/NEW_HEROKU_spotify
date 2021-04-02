@@ -24,20 +24,10 @@
 <div class="w3-top">
  <div class="w3-bar w3-theme-d2 w3-left-align">
   <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
-  <a href="#" class="w3-bar-item w3-button w3-green"><i class="fa fa-play w3-margin-right"></i>TOP 10 song recommender</a>
-  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Team</a>
+  <a href="#" class="w3-bar-item w3-button w3-green"><i class="fa fa-play w3-margin-right"></i>Home</a>
   <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Work</a>
-
-    <div class="w3-dropdown-hover w3-hide-small">
-    <button class="w3-button" title="Notifications">Dropdown? <i class="fa fa-caret-down"></i></button>     
-    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
-      <a href="#" class="w3-bar-item w3-button">Link</a>
-      <a href="#" class="w3-bar-item w3-button">Link</a>
-      <a href="#" class="w3-bar-item w3-button">Link</a>
-    </div>
-  </div>
-  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-green" title="Search"><i class="fa fa-search"></i></a>
- </div>
+  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Team</a>
+</div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
@@ -55,28 +45,19 @@
 <div class="w3-display-container w3-animate-opacity">
   <img src="https://i.insider.com/5e4c5ed32dae5c59666e3c35?width=1000&format=jpeg&auto=webp" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
   <div class="w3-container w3-display-bottomleft w3-margin-bottom">  
-    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge w3-theme w3-hover-green" title="Go To W3.CSS">GET RECOMMENDATIONS</button>
+    <button class="w3-button w3-xlarge w3-theme w3-hover-green" >Welcome! Tell us what you're listening to in the box below!</button>
   </div>
 </div>
 
 
 <!-- Hillary's Autocomplete search bar...-->
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            Spotify Song Suggester
-        </title>
-        <link rel="stylesheet" href="https://unpkg.com/picnic">
-    </head>
 
     <body>
         <article class="flex two" style="padding: 3em 1em">
             {%  block content %}
                 <div>
-                    <h1>Enter a song:</h1>
                     <form action="/recommendations" method="post">
-                        <input id="in_song" type="text" name="song_title" placeholder="Enter a song">
+                        <input id="in_song" type="text" size = "60" name="song_title" placeholder="Enter a song here...">
                         <input type="submit" value="Submit">
                     </form>
                 </div>
@@ -201,7 +182,7 @@
 <!-- Work Row -->
 <div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
 
-<div class="w3-quarter">
+<div class="w3-half">
 <h2>How We Pick Your Top Tracks:</h2>
 <p>This app represents a nearest-neighbords model from Sci-Kit Learn. The model was trained on data offered by spotify - data that represents deep categorization of songs and their characteristics. Using some of the brilliant metrics that spotify uses to suggest music to their users, we are able to return a short list of songs we think you will enjoy based on your song selection. </p>
 </div>
